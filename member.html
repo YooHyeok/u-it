@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>FlowerPot Manager</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+    <!-- 아래부터 포폴 리소스 -->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    	<link href="css/styles.css" rel="stylesheet" />
+    	        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    
+</head>
+
+
+<body>
+    <div class="wrapper">
+		<div class="sidebar" data-color="blue" >
+			
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="#" class="simple-text">관리자 </a>
+				</div>
+				<ul class="nav">
+					<li><a class="nav-link" href="index.html">
+							<i class="nc-icon nc-bulb-63"></i>
+							<p>About</p>
+						</a></li>
+					<li><a class="nav-link" href="dashboard.html">
+							<i class="nc-icon nc-chart-pie-35"></i>
+							<p>준비중</p>
+						</a></li>
+					<li><a class="nav-link" href="./coupon.html">
+							<i class="nc-icon nc-satisfied"></i>
+							<p>쿠폰 관리</p>
+						</a></li>
+					<li><a class="nav-link" href="./brand.html">
+							<i class="nc-icon nc-tag-content"></i>
+							<p>입점 관리</p>
+						</a></li>
+					<li><a class="nav-link" href="./employee.html">
+							<i class="nc-icon nc-circle-09"></i>
+							<p>직원 관리</p>
+						</a></li>
+					<li class="nav-item active"><a class="nav-link" href="./member.html">
+							<i class="nc-icon nc-badge"></i>
+							<p>회원 관리</p>
+						</a></li>
+					<li><a class="nav-link" href="./delivery.html">
+							<i class="nc-icon nc-delivery-fast"></i>
+							<p>주문 배송</p>
+						</a></li>
+					<li><a class="nav-link" href="./notice.html">
+							<i class="nc-icon nc-notification-70"></i>
+							<p>고객 센터</p>
+						</a></li>
+					<li class="nav-item active active-pro"><a class="nav-link active" href="https://yoohyeok.github.io/u-it/">
+							<i class="nc-icon nc-alien-33"></i>
+							<p>PortFolio</p>
+						</a></li>
+				</ul>
+			</div>
+		</div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#pablo">회원 관리</a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        
+                        <ul class="navbar-nav ml-auto">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card strpied-tabled-with-hover">
+										<div class="card-header ">
+											<h4 class="card-title" style="display: inline-block;">회원 목록</h4>
+											<!-- 검색 기능 -->
+											<div class="col-md-12 ">
+												<div class="pull-right" style="text-align: right;">
+													<div class="input-group pull-right" style="text-align: right !important;">
+														<button class="btn btn-izone btn-flat authorize-button mr-3" id="popup_open_btn" data-toggle="modal" data-target="#myModal1"  style="background-color: #212b52; color: white; border:1px solid #212b52">권한</button>
+
+														<select id="condition" class="y-form-control" name="condition" style="width: 100px;">
+															<option value="mno">번호</option>
+															<option value="id">ID</option>
+															<option value="name">이름</option>
+														</select>
+														<input type="text" class="y-form-control " name="keyword" id="keywordInput" placeholder="검색어" style="width: 200px;">
+														<span class="input-group-btn "> <input type="button" style="background-color: #212b52; color: white; display: inline-block;" value="검색" class="btn btn-izone btn-flat" id="searchBtn">
+														</span>
+													</div>
+												</div>
+											</div>
+											<p class="card-category">부제</p>
+										</div>
+										<div class="card-body table-full-width table-responsive">
+											<table class="table table-hover table-striped">
+												<!-- 게시글 목록 출력 -->
+												<!-- 게시글 목록 출력 -->
+												<thead>
+													<tr>
+														<th>번호</th>
+														<th>ID</th>
+														<th>이름</th>
+														<th>닉네임</th>
+														<th>이메일</th>
+														<th>성별</th>
+														<th>생일</th>
+														<th>등급</th>
+														<th>가입일</th>
+														<th>상태</th>
+														<th>비고</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+													<c:forEach var="mem" items="${mList}">
+														<tr>
+															<td>1</td>
+															<td>admin</td>
+															<td>유재혁</td>
+															<td>대통령</td>
+															<td>yjk7454@naver.com</td>
+															<td>남자</td>
+															<td>1992년 10월 23일</td>
+															<td>다이아몬드</td>
+															<td>yyyy년 MM월 dd일
+															</td>
+															<td>
+															활성화①
+															</td>
+															<td>
+																<form action="${pageContext.request.contextPath}/admin/member_delete">
+																	<input type="hidden" name="mno" value="${mem.mno}" />
+																	<input type="button" value="탈퇴">
+																</form>
+																<form action="${pageContext.request.contextPath}/admin/member_restore">
+																	<input type="hidden" name="mno" value="${mem.mno}" />
+																	<input type="button" value="복구">
+																</form>
+															</td>
+														</tr>
+													</c:forEach>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<!-- 검색 기능 -->
+								<!-- <div class="col-md-12 ">
+									<div class="pull-right" style="text-align: right;">
+										<div class="input-group pull-right" style="text-align: right !important; ">
+											<select id="condition" class="y-form-control"
+												name="condition" style="width: 100px;">
+												<option value="mno">번호</option>
+												<option value="id">ID</option>
+												<option value="name">이름</option>
+											</select> <input type="text" class="y-form-control " name="keyword"
+												id="keywordInput" placeholder="검색어" style="width: 200px;">
+											<span class="input-group-btn "> 
+												<input type="button"
+												style="background-color: #9765da; color: white; display: inline-block;" value="검색"
+												class="btn btn-izone btn-flat" id="searchBtn" >
+											</span>
+										</div>
+									</div>
+								</div> -->
+								<div class="col-md-12">
+									<!-- 페이징 처리 부분  -->
+									<div class="paging">
+										<ul class="pagination justify-content-center">
+											<!-- 이전 버튼 -->
+											<c:if test="${pc.prev}">
+												<li class="page-item"><a class="page-link" href="#" style="background-color: #212b52; margin-top: 0; height: 40px; color: white; border: 0px solid #212b52; opacity: 0.8">이전</a></li>
+											</c:if>
+
+											<!-- 페이지 버튼 -->
+											<c:forEach var="pageNum" begin="${pc.beginPage}" end="${pc.endPage}">
+												<li class="page-item"><a href="#" class="page-link ${(pc.paging.page == pageNum) ? 'page-active' : ''}" style="margin-top: 0; height: 40px; color: #212b52; text-align: center; border: 1px solid #212b52;">1</a></li>
+											</c:forEach>
+
+											<!-- 다음 버튼 -->
+											<c:if test="${pc.next}">
+												<li class="page-item"><a class="page-link" href="#" style="background-color: #212b52; margin-top: 0; height: 40px; color: white; border: 0px solid #212b52; opacity: 0.8">다음</a></li>
+											</c:if>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade modal modal-primary" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content" style="border: 3px solid #00498c; border-radius: 20px;">
+								<div class="modal-header justify-content-center" style="display: inline-block;">
+									<h3 style="text-align: center; color: #00498c; font-weight: bold">권한부여</h3>
+								</div>
+								<div class="modal-body text-center">
+									
+										<select class="custom-select" id="Authority-select">
+											<option value="NO" selected="selected">권한 종류</option>
+											<option value="ROLE_USER">일반회원</option>
+											<option value="ROLE_MAGAZINE">매거진</option>
+											<option value="ROLE_BRAND">브랜드 관리자</option>
+											<option value="ROLE_ADMIN">전체 관리자</option>
+										</select>
+										<select class="custom-select" id="brand-select">
+											<option value="" selected="selected">브랜드</option>
+											<!-- 이부분 -->
+												<option value="${b.brandName}" >이니스프리</option>
+												<option value="${b.brandName}" >더샘</option>
+												<option value="${b.brandName}" >클리오</option>
+												<option value="${b.brandName}" >더페이스샵</option>
+												<option value="${b.brandName}" >헤라</option>
+												<option value="${b.brandName}" >시드물</option>
+												<option value="${b.brandName}" >바닐라코</option>
+												<option value="${b.brandName}" >(주)미샤</option>
+												<option value="${b.brandName}" >키스미</option>
+												<option value="${b.brandName}" >베네피트</option>
+												<option value="${b.brandName}" >웨이크메이크</option>
+										</select>
+										
+										<div class="input-group my-3">
+											<input type="text" class="form-control" id="idBox" placeholder="id를 입력하세요" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border: 1px solid #19375e;">
+											<div class="input-group-append">
+												<button class="btn" type="button" style="background-color: #19375e; border: 1px solid #19375e; color: white;" onclick="return searchId();">검색</button>
+											</div>
+										</div>
+											
+										<ul class="list-group my-3 id-list">
+										</ul>
+										<input type="button" class="btn btn-outline-primary btn-lg btn-block" value="부여" style="background-color: #19375e; border: 1px solid #19375e; color: white;" onclick="return authoritySubmit();">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+						<ul class="footer-menu">
+							<li><a href="https://yoohyeok.github.io/TPFPA/"> Home </a></li>
+							<li><a href="https://github.com/YooHyeok"> GitHub </a></li>
+							<li><a href="https://yoohyeok.github.io/u-it/"> Portfolio </a></li>
+							<li><a href="https://u-it.tistory.com/"> Blog </a></li>
+						</ul>
+						<p class="copyright text-center">
+							©
+							<script>
+                                document.write(new Date().getFullYear())
+                            </script>
+							<a href="#">FlowerPot</a>
+							, made with love for a better web
+						</p>
+					</nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+
+</html>
