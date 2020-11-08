@@ -15,19 +15,41 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <style>
-        	.text-pupple{
-        		color: #9423cf;
-        	}
-        	.font-noto{
-        		font-family: 'noto sans';
-        	}
-        	.font-titWeb{
-        		font-family: 'Titillium web';
-        	}
-        </style>
-        
-    </head>
+<style>
+.text-pupple {
+	color: #9423cf;
+}
+
+.font-noto {
+	font-family: 'noto sans';
+}
+
+.font-titWeb {
+	font-family: 'Titillium web';
+}
+
+#interests{
+	position:relative;
+	z-index: 1;
+}
+#interests:after {
+	background-image: url('assets/img/fixed.jpg');
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-size: 100%;
+	/* background-repeat:no-repeat; */
+	background-position: center;
+	opacity: 0.3 !important;
+	filter: alpha(opacity = 0.3);
+	z-index: -1;
+	content: "";
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+</head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background: #9423cf;">
@@ -547,14 +569,37 @@
             <hr class="m-0" />
             <!-- Interests-->
             <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5 font-titWeb">Interests</h2>
-                    <!-- <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+			<div class="resume-section-content">
+				<div style="height:600px;">
+				<div style="background-color: rgba( 255, 255, 255, 0.5 ); width:120%;  margin-left:-50px;" >&nbsp;<br>
+				<h2 class="mb-5 font-titWeb" style="margin-left:50px;">Interests</h2>
+				<!-- <span class="d-none d-lg-block"><img class="img-fluid img-profile mx-auto mb-2" src="assets/img/fixed.jpg" style="opacity:0.1;"/></span>
+				 -->
+				<!-- <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
                     <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p> -->
-                    <p class="font-noto">웹 개발자가 되는 것 외에 Jazz피아노 연주와 노래 카피를 즐겨 하며, 따뜻한 계절에는 픽시 자전거 타는것을 즐깁니다.</p>
-                    <p class="mb-0 font-noto">여가 시간에는 R&B 음악을 주로 듣고, 백 엔드 웹 개발 세계의 최신 기술 발전을 탐구하는 데 많은 시간을 할애합니다.</p>
-                </div>
-            </section>
+				<p class="font-noto" style=" margin-left:50px; ">웹 개발자가 되는 것 외에 <b>Jazz피아노 연주</b>와 <b>노래 카피</b>를 즐겨 하며, 따뜻한 계절에는 <b>픽시 자전거</b> 타는것을 즐깁니다.<br>
+				여가 시간에는<b>R&B 음악</b>을 주로 듣고, <b>백 엔드 웹 개발 세계의 최신 기술 발전을 탐구</b>하는 데 많은 시간을 할애합니다.<br>&nbsp; </p>
+				</div>
+				
+<!--  				<p class="mb-0 font-noto" style="background-color: rgba( 255, 255, 255, 0.5 ); width:850px;"><b>여가 시간에는 R&B 음악을 주로 듣고, 백 엔드 웹 개발 세계의 최신 기술 발전을 탐구하는 데 많은 시간을 할애합니다.</b></p>
+ -->			<div class="form-group" >
+				<button style="background-color: #9423cf; color: white; border: 1px solid #9423cf; margin-top:40px;" class="btn btn-primary" type="button" id="open" onclick="onDisplay();">동영상</button>
+				<button style="background-color: #9423cf; color: white; border: 1px solid #9423cf; margin-top:40px; display: none" class="btn btn-primary" id="close" onclick="offDisplay();">닫기</button>
+				<div class="content" id="video" style="display: none; ">
+				<video controls style="width: 412px; height: 230px; margin-top:40px; margin-right:3px;">
+					<source src="assets/videos/bao.mp4" type="video/mp4">
+				</video>
+				<video controls style="width: 230px; height: 230px; margin-top:40px; margin-right:3px;">
+					<source src="assets/videos/tol.mp4" type="video/mp4">
+				</video>
+				<video controls style="width: 178px; height: 230px; margin-top:40px;">
+					<source src="assets/videos/ilu.mp4" type="video/mp4">
+				</video>
+				</div>
+				</div>
+				</div>
+			</div>
+		</section>
             <hr class="m-0" />
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">
@@ -614,4 +659,21 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
+<script>
+
+function onDisplay() {
+	if($("#video").css("display") == "none"){
+		$("#video").fadeIn(350);
+		$('#open').hide();
+		$('#close').show();
+	}
+}
+function offDisplay() {
+	if($("#open").css("display") == "none"){
+	$('#close').hide();
+	$('#open').show();
+	$('#video').fadeOut(350);
+	}
+}
+</script>
 </html>
