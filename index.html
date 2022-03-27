@@ -15,6 +15,19 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
+<link rel="stylesheet" type="text/css" href="[CSS FILE PATH">
+<style >
+  #sidebox{
+  background-color:#F0F0F0;
+  position: absolute;
+  width:150px;
+  top:20px;
+  right:40px;
+  }
+</style>
+
+        
 <style>
 .text-pupple {
 	color: #9423cf;
@@ -50,6 +63,24 @@
 </style>
 
 </head>
+<script>
+console.log("남궁찬 바보");
+/* var currentPosition = parseInt($("#sidebox").css("top")); 
+
+$(window).scroll(function() { 
+	var position = $(window).scrollTop(); 
+	$("#sidebox").stop().animate({"top":position+currentPosition+"px"},1000);
+});
+ */
+$(document).ready(function(){ 
+	var currentPosition = parseInt($("#sidebox").css("top")); 
+	$(window).scroll(function() {
+	var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
+	$("#sidebox").stop().animate({"top":position+currentPosition+"px"},1000);
+	});
+	});
+
+</script>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background: #9423cf;">
@@ -77,6 +108,14 @@
             <span class="d-none d-lg-block"><img class="img-fluid img-profile mx-auto mb-2" src="assets/img/NavBottomImg2.jpg" alt="" /></span>
         </nav>
         <!-- Page Content-->
+        <div id="sidebox"> 
+<a href="#1">* 사용된 기술스택</a> </br>
+<a href="#2">* 서비스 설계 구조</a> </br>
+<a href="#3">* 프로젝트 기능</a> </br>
+<a href="#4">* 권한별 기능</a> </br>
+<a href="#5">* 프로젝트 화면</a> </br>
+</div>        
+        
         <div class="container-fluid p-0">
             <!-- About-->
          
@@ -153,6 +192,14 @@
             <section class="resume-section" id="License">
                 <div class="resume-section-content">
                     <h2 class="mb-5 font-noto" >기술 자격증</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0 font-titWeb">정보 처리 기사 - 필기 (실기 준비중)</h3>                            
+                        <p>한국산업인력공단</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-pupple font-titWeb">23 March 2022 </span>
+                        </div>
+                    </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0 font-titWeb">컴퓨터 활용 능력 1급</h3>                            
